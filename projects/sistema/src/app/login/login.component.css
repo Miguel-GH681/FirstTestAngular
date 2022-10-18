@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    color: royalblue;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+}
+
+.contenedor{
+    text-align: center;
+}
+
+input{
+    width: 45%;
+    height: 25px;
+    margin: 15px;
+}

@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    color: royalblue;
+    border-bottom: 2px solid red;
+}
+
+.contenedor{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
