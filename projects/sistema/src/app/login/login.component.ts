@@ -6,10 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core'
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-    showLogin:boolean = true;
-    @Output() onLoginDisplay = new EventEmitter();
+    @Output() onUserLogged = new EventEmitter<void>();
 
-    ocultarLogin(){
-        this.onLoginDisplay.emit(this.showLogin);
+    login(){
+        this.onUserLogged.emit();
     }
 }

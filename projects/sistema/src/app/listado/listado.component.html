@@ -1,1 +1,2 @@
-<kta-dato *ngFor="let dato of listado" [dato]="dato" (datoSeleccionado)="seleccionar($event)"></kta-dato>
+<h3>Listado</h3>
+<kta-dato *ngFor="let dato of listado" [dato]="dato" (onSelectData)="seleccionar($event)"></kta-dato>

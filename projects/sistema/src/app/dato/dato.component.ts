@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Person } from '../shared/interfaces/person.interface';
 
 @Component({
   selector: 'kta-dato',
@@ -7,9 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class DatoComponent implements OnInit {
 
-  @Input() dato:any = {}
+  @Input() dato!:Person;
 
-  @Output() datoSeleccionado = new EventEmitter();
+  @Output() onSelectData = new EventEmitter();
 
   constructor() { }
 
@@ -17,7 +18,7 @@ export class DatoComponent implements OnInit {
   }
 
   seleccionar(){
-    this.datoSeleccionado.emit(this.dato)
+    this.onSelectData.emit(this.dato)
   }
 
 }

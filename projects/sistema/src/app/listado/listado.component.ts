@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Person } from '../shared/interfaces/person.interface';
 
 @Component({
   selector: 'kta-listado',
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
-  @Input() listado:Object[] = [];
+  @Input() listado:Person[] = [];
   @Output() datoSeleccionado = new EventEmitter();
 
   constructor() { }

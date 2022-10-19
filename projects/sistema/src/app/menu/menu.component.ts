@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  @Output() onTipoListado = new EventEmitter();
+  @Output() onTipoListado = new EventEmitter<number>();
   @Input() listado:object[] = [];
   @Output() dato = new EventEmitter();
 
@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  opcion(opcion:string){
+  opcion(opcion:number){
     this.onTipoListado.emit(opcion)
   }
 

@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Person } from './shared/interfaces/person.interface';
+
+type TPerson = {
+  nombre: string,
+  lastname: string
+}
 
 @Component({
   selector: 'kta-root',
@@ -8,10 +14,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   changeView:boolean = true;
+  viewListado?:boolean = undefined;
   tipoListado?:boolean = undefined;
-  datos : Object[] = [];
+  datos : Person[] = [];
 
-  medicos : Object[] = [
+  medicos : Person[] = [
     {nombre: 'Alvaro', apellido:'González'},
     {nombre: 'Carlos', apellido:'López'},
     {nombre: 'Laura', apellido:'Gutierrez'},
@@ -19,19 +26,24 @@ export class AppComponent {
     {nombre: 'Facundo', apellido: 'Pérez'}
   ]
 
-  pilotos : Object[] = [
+  pilotos : Array<Person> = [
     {nombre: 'Fernando', apellido:'Fernández'},
     {nombre: 'Karen', apellido:'Santiago'},
     {nombre: 'Elizabeth', apellido:'Olsen'},
     {nombre: 'Nicol', apellido:'Martinez'}
   ]
 
-  ocultarLogin(ocultar:any){
-    this.changeView = !ocultar;    
+  enfermeros: Array<Partial<Person>> = [
+    {nombre: 'Juan'}
+  ]
+
+  ocultarLogin(){
+    this.changeView = !this.changeView;    
   }
 
-  tipoInformacion(option:any){
-    if(option === 'medico'){
+  tipoInformacion(option:number){
+    this.viewListado = true;
+    if(option === 1){
       this.datos = this.medicos;
     } else{
       this.datos = this.pilotos;

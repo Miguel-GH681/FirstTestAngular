@@ -1,2 +1,3 @@
-<kta-login  *ngIf="changeView" (onLoginDisplay)="ocultarLogin($event)"></kta-login>
+<kta-login  *ngIf="changeView" (onUserLogged)="ocultarLogin()"></kta-login>
 <kta-menu *ngIf="!changeView" (onTipoListado)="tipoInformacion($event)" [listado]="datos" (dato)="lanzarAlert($event)"></kta-menu>
+<kta-listado *ngIf="viewListado" [listado]="datos" (datoSeleccionado)="lanzarAlert($event)"></kta-listado>

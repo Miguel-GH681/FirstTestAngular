@@ -1,10 +1,5 @@
 <h1>Menú</h1>
 <div class="contenedor">
-        <img src="https://img.freepik.com/vector-premium/dibujo-dibujos-animados-doctor_29937-8137.jpg?w=2000" alt="medico" width="40%" (click)="opcion('medico')">
-        <img src="https://i.pinimg.com/236x/d7/ca/f6/d7caf6d83332863c88871b4963c84b56.jpg" alt="piloto" width="40%" (click)="opcion('piloto')">
+        <img src="https://img.freepik.com/vector-premium/dibujo-dibujos-animados-doctor_29937-8137.jpg?w=2000" alt="medico" width="40%" (click)="opcion(1)">
+        <img src="https://i.pinimg.com/236x/d7/ca/f6/d7caf6d83332863c88871b4963c84b56.jpg" alt="piloto" width="40%" (click)="opcion(0)">
 </div>
-
-<kta-listado *ngIf="listado.length" [listado]="listado" (datoSeleccionado)="seleccionar($event)"></kta-listado>
-
-
-
