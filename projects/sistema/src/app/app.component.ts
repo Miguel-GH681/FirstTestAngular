@@ -18,6 +18,8 @@ export class AppComponent {
   tipoListado?:boolean = undefined;
   datos : Person[] = [];
 
+  fotoPerfil : string = 'https://i0.wp.com/lanoticia.com/wp-content/uploads/2021/09/venom-simbionte-Marvel.jpg?fit=1200%2C675&ssl=1';
+
   medicos : Person[] = [
     {nombre: 'Alvaro', apellido:'González'},
     {nombre: 'Carlos', apellido:'López'},

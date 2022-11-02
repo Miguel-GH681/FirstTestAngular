@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core'
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'kta-login',
@@ -6,9 +7,13 @@ import { Component, EventEmitter, Output } from '@angular/core'
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
+
     @Output() onUserLogged = new EventEmitter<void>();
+    fotoPerfil : string = '';
+
+    constructor(private router:Router){}
 
     login(){
-        this.onUserLogged.emit();
+        this.router.navigate(['listado/',1]);
     }
 }

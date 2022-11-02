@@ -1,3 +1,12 @@
+<!--
 <kta-login  *ngIf="changeView" (onUserLogged)="ocultarLogin()"></kta-login>
-<kta-menu *ngIf="!changeView" (onTipoListado)="tipoInformacion($event)" [listado]="datos" (dato)="lanzarAlert($event)"></kta-menu>
+<kta-menu *ngIf="!changeView" 
+    (onTipoListado)="tipoInformacion($event)" 
+    [listado]="datos" 
+    (dato)="lanzarAlert($event)"
+    [foto]="fotoPerfil">
+</kta-menu>
 <kta-listado *ngIf="viewListado" [listado]="datos" (datoSeleccionado)="lanzarAlert($event)"></kta-listado>
+-->
+
+<router-outlet></router-outlet>
